@@ -1,0 +1,38 @@
+<ion-view view-title="Chats" hide-nav-bar="true" nav-transition="none">
+  <!-- Bars -->
+  <div class="top_bar">
+    <a href="#/tab/finding" class="w50">Discover</a>
+    <a href="#/tab/chats" class="w50 active">Chats</a>
+  </div>
+
+  <ion-content class="padding_topbar">
+    <h2 class="pink heading_content">New Following</h2>
+    <div class="box_x bump_animation">
+      <a href="#" style="background-image:url(img/people/kj.png)"> </a>
+      <a href="#" style="background-image:url(img/people/irina.png)"> </a>
+    </div>
+    <br>
+    <h2 class="pink heading_content">Staying in the same city</h2>
+    <div class="box_x bump_animation">
+      <a href="#" style="background-image:url(img/people/force.png)"> </a>
+      <a href="#" style="background-image:url(img/people/kook.png)"> </a>
+      <a href="#" style="background-image:url(img/people/chanya.png)"> </a>
+      <a href="#" style="background-image:url(img/people/thun.png)"> </a>
+      <a href="#" style="background-image:url(img/people/patty.png)"> </a>
+    </div>
+    <br>
+    <h2 class="pink heading_content">Chats</h2>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
